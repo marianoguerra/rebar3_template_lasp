@@ -1,0 +1,29 @@
+{description, "Rebar3 Lasp Application"}.
+{variables, [
+    {name, "mylasp", "Name of the application"},
+    {desc, "A Lasp Application", "Short description of the app"}
+]}.
+
+{template, "rebar3_template_lasp.app.src.tpl", "{{name}}/apps/{{name}}/src/{{name}}.app.src"}.
+{template, "rebar3_template_lasp_rebar.config.tpl", "{{name}}/rebar.config"}.
+{template, "rebar3_template_lasp_editorconfig.tpl", "{{name}}/.editorconfig"}.
+{template, "rebar3_template_lasp_gitignore.tpl", "{{name}}/.gitignore"}.
+{template, "rebar3_template_lasp_README.rst.tpl", "{{name}}/README.rst"}.
+{template, "rebar3_template_lasp_Makefile.tpl", "{{name}}/Makefile"}.
+{file, "rebar3_template_lasp_config.schema.tpl", "{{name}}/config/{{name}}.schema"}.
+
+{template, "rebar3_template_lasp.erl.tpl", "{{name}}/apps/{{name}}/src/{{name}}.erl"}.
+{template, "rebar3_template_lasp_app.erl.tpl", "{{name}}/apps/{{name}}/src/{{name}}_app.erl"}.
+{template, "rebar3_template_lasp_sup.erl.tpl", "{{name}}/apps/{{name}}/src/{{name}}_sup.erl"}.
+{template, "rebar3_template_lasp_handler.erl.tpl", "{{name}}/apps/{{name}}/src/{{name}}_handler.erl"}.
+{template, "rebar3_template_lasp_peer_service.erl.tpl", "{{name}}/apps/{{name}}/src/{{name}}_peer_service.erl"}.
+
+{file, "rebar3_template_lasp_admin_cmd.tpl", "{{name}}/config/admin_bin"}.
+
+{file, "rebar3_template_lasp_advanced.config.tpl", "{{name}}/config/advanced.config"}.
+{template, "rebar3_template_lasp_vars.config.tpl", "{{name}}/config/vars.config"}.
+{template, "rebar3_template_lasp_vars_dev1.config.tpl", "{{name}}/config/vars_dev1.config"}.
+{template, "rebar3_template_lasp_vars_dev2.config.tpl", "{{name}}/config/vars_dev2.config"}.
+{template, "rebar3_template_lasp_vars_dev3.config.tpl", "{{name}}/config/vars_dev3.config"}.
+
+{chmod, "{{name}}/config/admin_bin", 8#744}.
